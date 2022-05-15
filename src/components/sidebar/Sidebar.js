@@ -26,12 +26,14 @@ const Sidebar = ({ sidebar, handleToggleSidebar }) => {
       }}
       className={sidebar ? "sidebar open" : "sidebar"}
     >
-      <li>
-        <MdHome size={23} />
-        <span>Home</span>
-      </li>
+      <Link className="sidebar__link" to="/">
+        <li>
+          <MdHome size={23} />
+          <span>Home</span>
+        </li>
+      </Link>
 
-      <Link to="/feed/subscriptions">
+      <Link className="sidebar__link" to="/feed/subscriptions">
         <li>
           <MdSubscriptions size={23} />
           <span>Subscriptions</span>
